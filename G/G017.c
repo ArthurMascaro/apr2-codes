@@ -16,7 +16,7 @@ int main() {
     while (1) {
         printf("Digite o nome completo do aluno (ou FIM para terminar): ");
         fgets(alunos[count].nome, sizeof(alunos[count].nome), stdin);
-        alunos[count].nome[strcspn(alunos[count].nome, "\n")] = '\0'; // Remove newline character
+        alunos[count].nome[strcspn(alunos[count].nome, "\n")] = '\0'
 
         if (strcmp(alunos[count].nome, "FIM") == 0) {
             break;
@@ -24,19 +24,19 @@ int main() {
 
         printf("Digite o sexo (M/F): ");
         scanf(" %c", &alunos[count].sexo);
-        getchar(); // Consume newline character
+        getchar();
 
         printf("Digite o registro acadêmico: ");
         fgets(alunos[count].ra, sizeof(alunos[count].ra), stdin);
-        alunos[count].ra[strcspn(alunos[count].ra, "\n")] = '\0'; // Remove newline character
+        alunos[count].ra[strcspn(alunos[count].ra, "\n")] = '\0';
 
         printf("Digite a data de ingresso (dd/mm/aaaa): ");
         fgets(alunos[count].data_ingresso, sizeof(alunos[count].data_ingresso), stdin);
-        alunos[count].data_ingresso[strcspn(alunos[count].data_ingresso, "\n")] = '\0'; // Remove newline character
+        alunos[count].data_ingresso[strcspn(alunos[count].data_ingresso, "\n")] = '\0'; 
 
         printf("Digite o nome do curso: ");
         fgets(alunos[count].curso, sizeof(alunos[count].curso), stdin);
-        alunos[count].curso[strcspn(alunos[count].curso, "\n")] = '\0'; // Remove newline character
+        alunos[count].curso[strcspn(alunos[count].curso, "\n")] = '\0'; 
 
         count++;
     }
